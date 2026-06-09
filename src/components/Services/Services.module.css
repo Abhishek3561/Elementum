@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Syne:wght@700;800&display=swap');
+
+.services { 
+  position: relative; 
+  padding: 120px 24px; 
+  max-width: 1100px; 
+  margin: 0 auto; 
+  box-sizing: border-box;
+}
+
+.curveWrapper { 
+  position: absolute; 
+  top: -60px ; 
+  right: 0 ;
+  width: 450px; 
+  height: auto;
+  pointer-events: none; 
+  z-index: 1;
+}
+
+.curveAsset {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.inner { 
+  position: relative; 
+  z-index: 2;
+}
+
+
+.title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+  font-weight: 700; 
+  line-height: 1.15; 
+  margin-bottom: 60px;
+  color: #111111;
+  letter-spacing: -0.02em;
+}
+
+.can {
+  background-color: #E2F0E7;
+  border-radius: 100px;
+  padding: 2px 20px;
+  display: inline-block;
+  font-style: normal;
+  margin-left: 4px;
+}
+
+.offer {
+  position: relative;
+  display: inline-block;
+}
+
+.offer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 3px; 
+  background-color: #F7D070;
+  border-radius: 2px;
+}
+
+
+.list { 
+  display: flex; 
+  flex-direction: column; 
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 240px 1fr 40px;
+  align-items: center; 
+  gap: 24px;
+  padding: 28px 10px;
+  border-bottom: 1px solid #EAEAEA;
+  cursor: pointer;
+  transition: background-color 0.2s, padding-left 0.25s ease;
+}
+
+.item:first-child { 
+  border-top: 1px solid #EAEAEA; 
+}
+
+.itemHover { 
+  background-color: #F9FBF9;
+  padding-left: 20px; 
+}
+
+.cat { 
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem; 
+  color: #777777; 
+  line-height: 1.4; 
+}
+
+.name {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  font-weight: 500; 
+  color: #111111;
+  letter-spacing: -0.01em;
+}
+
+.arrowWrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 1.4rem; 
+  color: #111111;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.itemHover .arrow { 
+  transform: translateX(6px); 
+}
+
+@media (max-width: 1024px) {
+  .curveWrapper {
+    width: 380px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 60px 16px;
+  }
+  .title {
+    margin-bottom: 40px;
+  }
+  .item { 
+    grid-template-columns: 1fr auto; 
+    gap: 8px 16px; 
+    padding: 20px 8px;
+  }
+  .cat { 
+    grid-column: 1 / -1; 
+  }
+  .arrowWrapper {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .curveWrapper { 
+    display: none !important; 
+  }
+}

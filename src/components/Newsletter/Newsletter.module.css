@@ -1,0 +1,113 @@
+.newsletter {
+  background-color: #DDEFE0;
+  position: relative;
+  padding: 120px 24px 80px 24px;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.vectorAsset {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.squiggleContainer {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-58%);
+  display: flex;
+  gap: 15px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.arrow {
+  width: 130px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.leaf {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 110px;
+  height: 140px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: 'Syne', 'Inter', sans-serif;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #000000;
+  letter-spacing: -0.03em;
+  margin: 0 0 20px 0;
+}
+
+.sub {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 36px;
+}
+
+.btn {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 16px 44px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.thanks {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+@media (max-width: 768px) {
+  .newsletter {
+    padding: 90px 20px 60px 20px;
+  }
+
+  .squiggleContainer {
+    top: 25px;
+    transform: translateX(-55%);
+    gap: 8px;
+  }
+
+  .arrow {
+    width: 45px;
+  }
+
+  .leaf {
+    right: -30px;
+    width: 90px;
+    height: 110px;
+  }
+}

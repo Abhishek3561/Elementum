@@ -1,0 +1,42 @@
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: #fff; transition: box-shadow 0.3s; padding: 18px 40px;
+}
+.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.07); }
+.inner {
+  max-width: var(--max-width); margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo {
+  font-family: var(--font-display);
+  font-size: 1rem; font-weight: 400; letter-spacing: 0.01em;
+}
+
+.links {
+  display: flex; list-style: none; gap: 32px; align-items: center;
+}
+.links a {
+  font-family: var(--font-body);
+  font-size: 0.8rem; color: var(--color-text);
+  transition: opacity 0.2s; font-weight: 400;
+}
+.links a:hover { opacity: 0.45; }
+
+
+.hamburger {
+  display: flex; align-items: center; justify-content: center;
+  background: none; padding: 4px; color: var(--color-text);
+  margin-left: 24px;
+}
+
+@media (max-width: 768px) {
+  .navbar { padding: 16px 20px; }
+  .links {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    background: #fff; flex-direction: column; gap: 0; padding: 16px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+  .open { display: flex; }
+  .links li { width: 100%; }
+  .links a { display: block; padding: 12px 24px; font-size: 0.95rem; }
+}

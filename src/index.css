@@ -1,0 +1,31 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-accent-yellow: #e8c84a;
+  --color-accent-green: #b8d4b8;
+  --color-accent-pink: #e8a0b0;
+  --color-accent-purple: #7c4dff;
+  --color-accent-red: #e05a4e;
+  --font-display: 'Libre Baskerville', Georgia, serif;
+  --font-body: 'Inter', sans-serif;
+  --max-width: 1200px;
+  --section-padding: 90px 80px;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; outline: none; font-family: var(--font-body); }
+
+@media (max-width: 768px) {
+  :root { --section-padding: 60px 24px; }
+}
